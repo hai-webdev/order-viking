@@ -1,0 +1,31 @@
+header {
+  padding: 10px 0;
+  .head-container {
+    .logo {
+      height: 36px;
+    }
+    .nav-list {
+      .nav-item {
+        margin: 0 6px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 13px;
+        &::before {
+          height: 2px;
+        }
+        &::after {
+          height: 2px;
+        }
+      }
+    }
+  }
+  &.on {
+    background-color: @mainColor;
+    padding: 10px 0;
+    .head-container {
+      .logo {
+        height: 36px;
+      }
+    }
+  }
+}

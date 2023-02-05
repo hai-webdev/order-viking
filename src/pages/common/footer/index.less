@@ -1,0 +1,91 @@
+@import "~@/assets/global.less";
+footer {
+  padding: 106px 0 40px;
+  background-color: #F8F8F4;
+  .center-layout {
+    .logo {
+      display: block;
+      width: 178px;
+      margin-bottom: 32px;
+      img {
+        width: 100%;
+      }
+    }
+    .top-foot {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 150px;
+      .company {
+        width: 418px;
+        font-size: 17px;
+        color: #0a0000;
+      }
+      .nav-list {
+        display: flex;
+        .nav-item {
+          width: 230px;
+          margin-left: 42px;
+          &:first-child {
+            margin-left: 0;
+          }
+          .nav-sublist {
+            .nav-title {
+              font-size: 20px;
+              color: @mainColor;
+              font-weight: bold;
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid #9A9A9A;
+            }
+            .nav-subitem{
+              margin-bottom: 8px;
+              font-size: 16px;
+              font-weight: bold;
+              a{
+                color:@mainColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom-foot{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      .left-copyright{
+        color:#0A0000;
+      }
+      .right-link{
+        a{
+          color:@mainColor;
+          padding-right: 10px;
+          margin-right: 10px;
+          position: relative;
+          &::after{
+            content:"";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 70%;
+            background-color: #736D6B;
+          }
+          &:last-child{
+            margin-right: 0;
+            padding-right: 0;
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./1440.less" screen and (max-width:1440px);
+@import "./1080.less" screen and (max-width:1080px);
+@import "./768.less" screen and (max-width:768px);
